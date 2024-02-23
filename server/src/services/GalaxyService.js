@@ -1,8 +1,8 @@
 import { dbContext } from "../db/DbContext"
 
-class GalaxiesService {
+class GalaxyService {
     async getGalaxies() {
-        const galaxies = await dbContext.Galaxies.find().populate('creator', 'name')
+        const galaxies = await dbContext.Galaxy.find().populate('creator', 'name')
         return galaxies
     }
 
@@ -12,4 +12,4 @@ class GalaxiesService {
     }
 }
 
-export const galaxiesService = new GalaxiesService()
+export const galaxyService = new GalaxyService()
